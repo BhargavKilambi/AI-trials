@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../../favicon.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<style type="text/css">
+		.style-hero{
+			background-image: url(y.jpg);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+		}
+
+		.fa {
+  		padding: 20px;
+  		font-size: 20px;
+  		width: 20px;
+  		text-align: center;
+  		text-decoration: none;
+  		margin: 5px 2px;
+  		border-radius: 50%;
+		}
+
+	.fa:hover {
+    
+    color: #ccc;
+    text-decoration-color: transparent;
+
+		}
+
+.fa-facebook {
+  background: transparent;
+  color: white;
+}
+.fa-google {
+
+  color: white;
+  background-color: transparent;
+}
+.fa-soundcloud {
+  background: transparent;
+  color: white;
+}
+.fa-youtube {
+  background: transparent;
+  color: white;
+}
+.fa-instagram {
+  background: transparent;
+  color: white;
+}
+	</style>
+	<title>ME</title>
+</head>
+<body class="style-hero">
+
+<div class="jumbotron jumbotron-fluid text-center" style="background-color: black;opacity: 0.8;color: white">
+  <h1 class="display-3">Hello, there!</h1>
+  <p class="lead">I'm your ChatBot!<br>What would you like to know?<br>Ask me :)</p> 
+  <hr class="my-4">
+  
+
+
+
+</div>
+
+<br>
+  <div class="container">
+	
+	<input class="form-control" type="text" readonly style="width: 70%;opacity: 0.8;color: black;background-color: #ccc;float: right" value="Your Question" id="que">
+	<br>
+	<br>
+	<input class="form-control" type="text" readonly style="width: 88%;opacity: 0.8;color: white;background-color: black;" value="Answer…" id="ans">
+	<br>
+	<div class="container-fluid text-center">
+		<input class="form-control" type="text" placeholder="Enter a message..." value="" id="msg" onkeypress="s(event);" style="opacity: 0.9;">
+		<br>
+	<button type="button" class="btn btn-primary" id="send" onclick="reply();">Send</button>
+	<br>
+	</div>
+
+
+	<script type="text/javascript">
+
+		function s(e){
+ 		var key=e.keyCode || e.which;
+  		if (key==13){
+     	reply();
+  		}
+  		}
+
+
+		function reply(){
+			var q = document.getElementById('msg').value;
+			document.getElementById('que').value = q;
+			
+
+			if(q == "Hi"||q=="Hello"||q=="hey"||q=="Hey"||q=="hello"||q=="sup")
+			{
+				var a = "Hello! What can I do for you?";
+				document.getElementById('ans').value = a;
+				d
+			}
+			else if(/youtube/.test(q)||/yt/.test(q)||/Youtube/.test(q)||/Yt/.test(q)){
+				document.getElementById('ans').value = "Okay";
+				window.open("https://www.youtube.com/");
+			}
+			else if(/google/.test(q)||/Google/.test(q)){
+				document.getElementById('ans').value = "Okay";
+				window.open("https://www.google.co.in/");
+			}
+			
+			else if (/what can you do/.test(q)) {
+				document.getElementById('ans').value = "You can ask me ques like open Google or Facebook.";
+			}
+			else if (/who are you/.test(q)||/Who are you/.test(q)) {
+				document.getElementById('ans').value = "I'm an A.I. bot here to assist you! :)";
+			}
+			else{
+				var a = "Sorry, I didn't understand your Question."
+				document.getElementById('ans').value = a;
+			}
+
+			document.getElementById('msg').value = "";
+			
+		}
+	</script>
+
+
+</div>
+<div class="container text-center" style="margin-top: 5px;">
+<div class="jumbotron" style="background-color: black;opacity: 0.9;margin-bottom: 0px;padding-bottom: 6px;padding-top: 10px;">
+	<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+  		<a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+  		<a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+  		<a href="https://www.google.com/" class="fa fa-google"></a>	
+  		<p class="lead" style="color: white">&copy; Bhargav Ram</p>
+  </div>
+
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
