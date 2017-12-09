@@ -1,1 +1,1 @@
-# AI-trials
+# AI using basic web tech
